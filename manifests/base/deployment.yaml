@@ -1,7 +1,7 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: "82023132" 
+  name: "82023132"
 spec:
   replicas: 1
   selector:
@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: "82023132" 
+        app: "82023132"
     spec:
       containers:
-        - name: "82023132" 
-          image: cepgbaseacr.azurecr.io/82023132
+        - name: "82023132"
+          image: ceappacr.azurecr.io/82023132
           ports:
           - containerPort: 8080
