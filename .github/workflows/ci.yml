@@ -3,7 +3,7 @@ name: github action CI
 on: workflow_dispatch
 
 env:
-  IMAGE_NAME: 82023132
+  IMAGE_NAME: 82036602
 
 jobs:
   build:
@@ -35,8 +35,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: ${{ secrets.BASEACR_LOGIN_SERVER  }}
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username: ${{ secrets.REGISTRY_BASE_USERNAME }}
+        password: ${{ secrets.REGISTRY_BASE_PASSWORD }}
 
     - name: 'Build & Tag Image'
       run: |
