@@ -1,13 +1,13 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: "82023132" 
+  name: "82023132"
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: "82023132" 
+        - name: "82023132"
           command: ["java","-jar","/app.jar"]
           args: ["--spring.config.location=file:/config/application.yml"]
           volumeMounts:
@@ -16,14 +16,14 @@ spec:
             readOnly: false
             subPath: cloud-sample
           - mountPath: /config
-            name: application-properties
+            name: "82023132-properties"
             readOnly: true
                           
       volumes:
       - name: "82023132-volume"
         persistentVolumeClaim:
-          claimName: cepg-aa-std-pvc
-      - name: application-properties
+          claimName: ce-aa-pvc
+      - name: "82023132-properties"
         configMap:
           name: "82023132-configmap"
           items:
